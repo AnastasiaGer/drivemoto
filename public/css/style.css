@@ -94,19 +94,10 @@ body {
   font-family: 'SFProDisplay-Bold', sans-serif;
   font-weight: 700;
 }
-.menu__item {
-  display: inline-block;
-}
-.menu__item + .menu__item {
-  padding-left: 50px;
-}
 .header__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.menu__btn {
-  display: none;
 }
 .header__address {
   margin-right: 60px;
@@ -114,7 +105,22 @@ body {
   padding-left: 30px;
   position: relative;
 }
-.header__address::before {
+.header__bottom {
+  margin-bottom: 80px;
+}
+.menu__item {
+  display: inline-block;
+}
+.menu__item + .menu__item {
+  padding-left: 50px;
+}
+.menu__btn {
+  display: none;
+}
+.menu__mobile-linewrapper {
+  display: none;
+}
+.header .header__address::before {
   content: "";
   position: absolute;
   background-image: url('../../img/address-icon.svg');
@@ -132,6 +138,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.user-list__item {
+  padding-right: 10px;
+}
 .menu-mobile__list {
   width: 243px;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
@@ -142,9 +151,6 @@ body {
   transition: all 0.3s;
   position: absolute;
   background-color: #fff;
-}
-.menu__mobile-linewrapper {
-  display: none;
 }
 .menu-mobile__list--active {
   -webkit-transform: translateX(0%);
@@ -164,9 +170,6 @@ body {
   bottom: 0;
   left: 11px;
 }
-.user-list__item {
-  padding-right: 10px;
-}
 .basket {
   position: relative;
 }
@@ -184,9 +187,6 @@ body {
   text-align: center;
   bottom: -2px;
   right: -13px;
-}
-.header__bottom {
-  margin-bottom: 80px;
 }
 .menu-categories {
   background-color: #F0F0F4;
@@ -254,6 +254,17 @@ body {
 .banner-section__slider {
   max-width: 870px;
 }
+.banner-section__slider-btnprev {
+  left: 20px;
+}
+.banner-section__slider-btnnext {
+  right: 20px;
+}
+.banner-section__slider-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 400px;
+}
 .banner-section__slider-btn,
 .product-slider__slider-btn {
   position: absolute;
@@ -266,12 +277,6 @@ body {
   margin: 0;
   z-index: 5;
   cursor: pointer;
-}
-.banner-section__slider-btnprev {
-  left: 20px;
-}
-.banner-section__slider-btnnext {
-  right: 20px;
 }
 .slick-dots {
   position: absolute;
@@ -316,17 +321,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.sale-item-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
 .sale-item__info {
   color: #fff;
   background-color: #1C62CD;
@@ -338,13 +332,6 @@ body {
 }
 .sale-item__price {
   text-align: right;
-}
-.aside__btn {
-  display: none;
-}
-.price {
-  font-family: 'Barlow', sans-serif;
-  position: relative;
 }
 .sale-item__price-new {
   font-weight: 700;
@@ -406,14 +393,27 @@ body {
   font-weight: 700;
   margin-bottom: 7px;
 }
-.banner-section__slider-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  min-height: 400px;
-}
 .sale-item__img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.sale-item-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.aside__btn {
+  display: none;
+}
+.price {
+  font-family: 'Barlow', sans-serif;
+  position: relative;
 }
 /**
   * ===========================================================
@@ -443,12 +443,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-}
-.tabs-content {
-  display: none;
-}
-.tabs-content.tabs-content--active {
-  display: block;
 }
 .search__content-form {
   display: -webkit-box;
@@ -492,6 +486,12 @@ body {
 }
 .search__content-input::placeholder {
   color: #656464;
+}
+.tabs-content {
+  display: none;
+}
+.tabs-content.tabs-content--active {
+  display: block;
 }
 /**
   * ===========================================================
