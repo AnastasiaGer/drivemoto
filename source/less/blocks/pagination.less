@@ -1,8 +1,38 @@
 /**
   * ===========================================================
-  * PAGINATION
+  * PAGINATION desktop
   * ===========================================================
 */
+
+.pagination {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-list__item {
+  font-family: 'Barlow', sans-serif;
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  font-size: 18px;
+  line-height: 22px;
+  color: #C4C4C4;
+  margin: 0 4px;
+}
+
+.pagination-list__item.active {
+  border: 2px solid #1C62CD;
+  color: #1C62CD;
+}
+
+.pagination-list__item a {
+  display: block;
+}
+
 
 
 /**
@@ -11,42 +41,10 @@
   * ===========================================================
 */
 
-@media (min-width: @tablet-max-width) {
+@media (max-width: @tablet-width) {}
 
-}
 /**
   * ===========================================================
-  * PAGINATION desktop
+  * PAGINATION mobile
   * ===========================================================
 */
-
-@media (min-width: @desktop-max-width) {
-  .pagination{
-    width: 100%;
-    margin-top: 70px;
-  }
-
-  .pagination-list{
-    display: flex;
-    justify-content: center;
-  }
-
-  .pagination-list__item{
-    font-family: 'Barlow', sans-serif;
-    padding: 6px 12px;
-    border: 2px solid transparent;
-    font-size: 18px;
-    line-height: 22px;
-    color: #C4C4C4;
-    margin: 0 4px;
-  }
-
-  .pagination-list__item.active{
-    border: 2px solid #1C62CD;
-    color: #1C62CD;
-  }
-
-  .pagination-list__item a{
-    display: block;
-  }
-}
