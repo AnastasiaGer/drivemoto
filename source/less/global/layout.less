@@ -1,52 +1,48 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-
-  font-size: 14px;
-  line-height: 21px;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #000000;
-  background-color: #f2f2f2;
+html{
   box-sizing: border-box;
 }
 
-.overlay {
-  display: none;
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  height: 100%;
-  width: 100%;
-
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 250;
+*,*::before, *::after{
+  box-sizing: inherit;
 }
 
-.hidden {
-  display: none;
+a{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+ul,
+li{
+  margin: 0;
   padding: 0;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  list-style: none;
 }
 
-@media (min-width: @desktop-max-width) {
-  .visually-hidden-desktop {
-    display: none;
-  }
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+body{
+  color: #2F3035;
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-section {
+  margin-bottom: 80px;
 }
