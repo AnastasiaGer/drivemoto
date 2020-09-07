@@ -10,7 +10,6 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var terser = require("gulp-terser");
 var server = require("browser-sync").create();
-var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
@@ -18,7 +17,9 @@ var include = require("posthtml-include");
 var del = require("del");
 
 gulp.task("css", function () {
-  return gulp.src("source/less/style.less")
+  return gulp.src([
+    'source/less/style.less'
+  ])
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
@@ -36,7 +37,9 @@ gulp.task("css", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/script.js")
+  return gulp.src([
+    'source/js/script.js'
+  ])
     .pipe(sourcemap.init())
     .pipe(gulp.dest("source/js"))
     .pipe(gulp.dest("public/js"))
@@ -61,16 +64,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch(("source/img/icon-*.svg"), gulp.series("sprite", "html", "refresh"));
   gulp.watch(("source/*.html"), gulp.series("html", "refresh"));
-});
-
-gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("webp", function () {
@@ -122,7 +115,6 @@ gulp.task("public", gulp.series(
   "copy",
   "css",
   "js",
-  "images",
   "webp",
   "sprite",
   "html",
