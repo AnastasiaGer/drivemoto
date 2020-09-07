@@ -116,7 +116,22 @@ button.catalog__filter-btnline {
   * ===========================================================
 */
 
-@media (max-width: @tablet-width) {}
+@media (max-width: @tablet-width) {
+  .catalog__inner-list{
+    justify-content: space-around;
+  }
+  .catalog__filter-btn button{
+    display: none;
+  }
+
+  .catalog__filter-btn{
+    margin-top: 30px;
+  }
+
+  .catalog__filter{
+    display: block;
+  }
+}
 
 
 /**
@@ -124,3 +139,8 @@ button.catalog__filter-btnline {
   * CATALOG mobile
   * ===========================================================
 */
+@media (max-width: @mobile-width) {
+  .catalog__inner{
+    flex-wrap: wrap;
+  }
+}
